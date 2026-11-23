@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Montra Studio — Markanızı Geleceğe Taşıyoruz</title>
+  <meta name="description" content="Montra Studio; web tasarım, web yazılım, logo ve marka kimliği, tanıtım videosu ve dijital pazarlama hizmetleri sunan dijital tasarım ajansı.">
+  <meta name="theme-color" content="#060606">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Inter:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.documentElement.classList.add('js');
+    // GSAP yüklenemezse içerik gizli kalmasın
+    window.addEventListener('load', function () { if (!window.gsap) document.documentElement.classList.remove('js'); });
+  </script>
+</head>
+<body>
+
+<!-- ====== SVG ikon seti ====== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-logo" viewBox="0 0 48 30">
+      <path fill="currentColor" d="M0 0h10.5L24 14.2 37.5 0H48v30h-9V13.4L24 28.6 9 13.4V30H0z"/>
+      <path fill="#060606" d="M10.5 19.5 18 24.2l-7.5 4.6z"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15M13.5 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15M10.5 6l-6 6 6 6"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.5 4.5 4.5L19.5 7"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.6v12.8c0 .8.9 1.3 1.6.8l9.6-6.4c.6-.4.6-1.2 0-1.6L9.6 4.8C8.9 4.3 8 4.8 8 5.6z"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="3.5" width="19" height="13" rx="1.2"/><path d="M8 20.5h8M12 16.5v4"/></g></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3.5H4.5a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h15a1 1 0 0 0 1-1V9"/><path d="M3.5 8.5h7M10.5 8.5v12"/><path d="m21 2.5-7.5 7.5-.8 2.6 2.6-.8L22.8 4.3z"/></g></symbol>
+    <symbol id="i-code2" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="m8 7-5 5 5 5M16 7l5 5-5 5M13.5 4.5l-3 15"/></symbol>
+    <symbol id="i-feather" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 3.8C14 3.6 7.5 7.4 6 14.5L4.5 20 10 18.5c7-1.6 10.6-8.3 10.2-14.7z"/><path d="M4.5 20 15 9.5M9 15.5h5.5M11.5 11h5"/></g></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 4.5h17v15h-17z"/><path d="m3.5 4.5 7 9.5M10 9.5l6 3.2-6 3.3z"/></g></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="m2.5 17.5 6.5-6.5 4.5 4.5 8-8M15.5 7.5h6v6"/></symbol>
+    <symbol id="i-wand" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="6.5" r="2.5"/><path d="m8.8 8.3 10.7 10.7M17 16.5l2.5-2.5"/></g></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4.5v3.7h-3.7"/><path d="M9 11.5c.8 1.6 1.8 2.6 3 3.3 1.2-.7 2.2-1.7 3-3.3"/></g></symbol>
+    <symbol id="i-play-o" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M7 4.5v15l12-7.5zM7 19.5 4 21"/></symbol>
+    <symbol id="i-cam" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5.5" width="16" height="14.5" rx="3"/><circle cx="12" cy="12.8" r="3"/><path d="M9.5 5.5 10.5 3.5h3l1 2"/></g></symbol>
+    <symbol id="i-quote" viewBox="0 0 32 24"><path fill="currentColor" d="M0 24V13.6C0 6 4.2 1.4 11.4 0l1.4 3.2C8.6 4.6 6.6 7.4 6.4 11H12v13zm18 0V13.6C18 6 22.2 1.4 29.4 0l1.4 3.2c-4.2 1.4-6.2 4.2-6.4 7.8H30v13z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M22.5 7.2a2.8 2.8 0 0 0-2-2C18.8 4.8 12 4.8 12 4.8s-6.8 0-8.5.4a2.8 2.8 0 0 0-2 2C1 8.9 1 12 1 12s0 3.1.5 4.8a2.8 2.8 0 0 0 2 2c1.7.4 8.5.4 8.5.4s6.8 0 8.5-.4a2.8 2.8 0 0 0 2-2c.5-1.7.5-4.8.5-4.8s0-3.1-.5-4.8zM9.8 15.1V8.9l5.6 3.1z"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM8 19H5V9.5h3zM6.5 8.2a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5S12.8 13 12.8 14.3V19h-3V9.5h2.9v1.3c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.7z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M21 16.6v2.9a1.9 1.9 0 0 1-2.1 1.9 18.9 18.9 0 0 1-8.2-2.9 18.6 18.6 0 0 1-5.7-5.7A18.9 18.9 0 0 1 2.1 4.6 1.9 1.9 0 0 1 4 2.5h2.9a1.9 1.9 0 0 1 1.9 1.6c.1.9.4 1.8.7 2.7a1.9 1.9 0 0 1-.4 2L7.8 10a15.2 15.2 0 0 0 5.7 5.7l1.3-1.3a1.9 1.9 0 0 1 2-.4c.9.3 1.8.6 2.7.7a1.9 1.9 0 0 1 1.6 1.9z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ====== Header ====== -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a href="#anasayfa" class="logo" aria-label="Montra Studio ana sayfa">
+      <svg class="logo__mark"><use href="#i-logo"/></svg>
+      <span class="logo__text"><span class="logo__name">MONTRΛ</span><span class="logo__sub">STUDIO</span></span>
+    </a>
+    <nav class="nav" aria-label="Ana menü">
+      <ul class="nav__list">
+        <li><a href="#anasayfa" class="nav__link is-active">Ana Sayfa</a></li>
+        <li><a href="#hizmetler" class="nav__link">Hizmetler</a></li>
+        <li><a href="#portfolyo" class="nav__link">Portfolyo</a></li>
+        <li><a href="#paketler" class="nav__link">Paketler</a></li>
+        <li><a href="#hakkimizda" class="nav__link">Hakkımızda</a></li>
+        <li><a href="#iletisim" class="nav__link">İletişim</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+905550459337" class="btn btn--outline header__cta">Teklif Al <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
+    <button class="burger" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobil menü -->
+<div class="mmenu" id="mobileMenu" aria-hidden="true">
+  <ul class="mmenu__list">
+    <li><a href="#anasayfa">Ana Sayfa</a></li>
+    <li><a href="#hizmetler">Hizmetler</a></li>
+    <li><a href="#portfolyo">Portfolyo</a></li>
+    <li><a href="#paketler">Paketler</a></li>
+    <li><a href="#hakkimizda">Hakkımızda</a></li>
+    <li><a href="#iletisim">İletişim</a></li>
+  </ul>
+  <a href="tel:+905550459337" class="btn btn--primary mmenu__cta">Teklif Al <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
+  <a href="tel:+905550459337" class="phone mmenu__phone"><svg class="ico"><use href="#i-phone"/></svg>0555 045 93 37</a>
+</div>
+
+<main>
+  <!-- ====== Hero ====== -->
+  <section class="hero" id="anasayfa">
+    <svg class="hero__curves" viewBox="0 0 1440 520" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M-40 120C220 40 420 170 610 90S900 -20 1120 40" />
+      <path d="M-60 360C180 250 380 330 560 230S820 60 1000 110" />
+      <path d="M200 560C320 380 520 330 640 300" />
+    </svg>
+    <div class="hero__visual" aria-hidden="true">
+      <img src="assets/hero-statue.jpg" alt="" class="hero__img" fetchpriority="high">
+      <span class="hero__neon"></span>
+    </div>
+
+    <div class="container hero__content" id="hakkimizda">
+      <p class="eyebrow" data-hero>Dijital Dünyada Güçlü Adım</p>
+      <h1 class="hero__title">
+        <span class="line"><span class="line__in">Markanızı</span></span>
+        <span class="line"><span class="line__in">Geleceğe</span></span>
+        <span class="line"><span class="line__in accent">Taşıyoruz.</span></span>
+      </h1>
+      <p class="hero__text" data-hero>Montra Studio olarak, markaların dijital potansiyelini ortaya çıkaran yenilikçi web çözümleri sunuyoruz.</p>
+      <div class="hero__actions" data-hero>
+        <a href="#portfolyo" class="btn btn--primary">Projelerimizi Keşfet <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
+        <button type="button" class="play" data-video="">
+          <span class="play__circle"><svg><use href="#i-play"/></svg></span>
+          <span class="play__label"><strong>Tanıtım Videosu</strong><small>İzle (1:24)</small></span>
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ====== Hizmetler ====== -->
+  <section class="services section" id="hizmetler">
+    <div class="container">
+      <div class="services__head">
+        <div data-reveal>
+          <p class="eyebrow eyebrow--sm">Hizmetlerimiz</p>
+          <h2 class="h2">Dijitalde İhtiyacınız<br>Olan Her Şey</h2>
+        </div>
+        <p class="services__desc" data-reveal>Markanızın dijital yolculuğunda ihtiyaç duyduğunuz<br>tüm hizmetleri tek çatı altında sunuyoruz.</p>
+        <a href="#hizmetler" class="link" data-reveal><span class="d-only">Tüm Hizmetleri Gör</span><span class="m-only">Tümünü Gör</span> <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <div class="services__grid">
+        <a href="#iletisim" class="scard">
+          <svg class="scard__icon"><use href="#i-monitor"/></svg>
+          <h3 class="scard__title">Web Tasarım</h3>
+          <p class="scard__text">Modern ve özgün web siteleri ile markanızı güçlendirin.</p>
+          <svg class="scard__arrow"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="#iletisim" class="scard">
+          <svg class="scard__icon d-only"><use href="#i-code"/></svg>
+          <svg class="scard__icon m-only"><use href="#i-code2"/></svg>
+          <h3 class="scard__title">Web Yazılım</h3>
+          <p class="scard__text">Özel yazılım çözümleri ile fark yaratın.</p>
+          <svg class="scard__arrow"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="#iletisim" class="scard">
+          <svg class="scard__icon"><use href="#i-feather"/></svg>
+          <h3 class="scard__title">Logo &amp; Marka Kimliği</h3>
+          <p class="scard__text">Markanız için özgün bir kimlik kazandırın.</p>
+          <svg class="scard__arrow"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="#iletisim" class="scard">
+          <svg class="scard__icon"><use href="#i-video"/></svg>
+          <h3 class="scard__title">Tanıtım Videosu</h3>
+          <p class="scard__text">Markanızı en iyi şekilde tanıtın.</p>
+          <svg class="scard__arrow"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="#iletisim" class="scard">
+          <svg class="scard__icon"><use href="#i-trend"/></svg>
+          <h3 class="scard__title">Dijital Pazarlama</h3>
+          <p class="scard__text">Dijital dünyada daha fazla müşteriye ulaşın.</p>
+          <svg class="scard__arrow"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Portfolyo ====== -->
+  <section class="portfolio" id="portfolyo">
+    <div class="portfolio__media" aria-hidden="true">
+      <img src="assets/portfolio-strip.jpg" alt="" class="portfolio__strip" loading="lazy">
+      <img src="assets/portfolio-laptop.jpg" alt="" class="portfolio__laptop" loading="lazy">
+    </div>
+    <div class="container portfolio__inner">
+      <div class="portfolio__text">
+        <p class="eyebrow eyebrow--sm" data-reveal>Portfolyo</p>
+        <h2 class="h2" data-reveal>Yaptığımız<br>Projeler</h2>
+        <p class="portfolio__desc" data-reveal>Fark yaratan projelerimizle<br>ilham alın.</p>
+        <a href="#portfolyo" class="btn btn--ghost btn--sm" data-reveal><span class="d-only">Tüm Projeleri Gör</span><span class="m-only">Tümünü Gör</span> <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Paketler ====== -->
+  <section class="pricing section" id="paketler">
+    <div class="container pricing__grid">
+      <div class="pricing__intro">
+        <p class="eyebrow eyebrow--sm" data-reveal>Paketlerimiz</p>
+        <div class="pricing__titlerow" data-reveal>
+          <h2 class="h2">İhtiyacınıza Uygun<br>Paket Seçenekleri</h2>
+          <button class="pricing__next m-only" type="button" aria-label="Sonraki paket"><svg class="ico"><use href="#i-arrow"/></svg></button>
+        </div>
+        <p class="pricing__desc" data-reveal>Her projenin özel olduğunu biliyoruz.<br>Bu yüzden farklı ihtiyaçlara yönelik paketler sunuyoruz.</p>
+        <a href="siparis.html" class="btn btn--primary btn--sm pricing__all" data-reveal>Tüm Paketleri İncele <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <div class="pricing__cards">
+        <article class="pcard">
+          <h3 class="pcard__title">Tasarım Paketi</h3>
+          <p class="pcard__sub">Sadece tasarım ve kod dosyası.</p>
+          <p class="pcard__price"><span>₺</span>14.999</p>
+          <ul class="pcard__list">
+            <li><svg><use href="#i-check"/></svg>Kişiye Özel Tasarım</li>
+            <li><svg><use href="#i-check"/></svg>Kod Dosyası Teslimi</li>
+          </ul>
+          <a href="siparis.html?paket=tasarim" class="pcard__btn">Paket Seç <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="pcard pcard--popular">
+          <span class="pcard__badge">En Popüler</span>
+          <h3 class="pcard__title">Başlangıç Paketi</h3>
+          <p class="pcard__sub">Web sitesi + temel altyapı.</p>
+          <p class="pcard__price"><span>₺</span>24.999</p>
+          <ul class="pcard__list">
+            <li><svg><use href="#i-check"/></svg>Kişiye Özel Tasarım</li>
+            <li><svg><use href="#i-check"/></svg>Domain</li>
+            <li><svg><use href="#i-check"/></svg>Hosting</li>
+            <li><svg><use href="#i-check"/></svg>SSL Sertifikası</li>
+            <li><svg><use href="#i-check"/></svg>Kod Dosyası Teslimi</li>
+          </ul>
+          <a href="siparis.html?paket=baslangic" class="pcard__btn">Paket Seç <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="pcard">
+          <h3 class="pcard__title">Profesyonel Paket</h3>
+          <p class="pcard__sub">Kurumsal çözümler.</p>
+          <p class="pcard__price"><span>₺</span>34.999</p>
+          <ul class="pcard__list">
+            <li><svg><use href="#i-check"/></svg>Kişiye Özel Tasarım</li>
+            <li><svg><use href="#i-check"/></svg>Domain</li>
+            <li><svg><use href="#i-check"/></svg>Hosting</li>
+            <li><svg><use href="#i-check"/></svg>SSL Sertifikası</li>
+            <li><svg><use href="#i-check"/></svg>Temel SEO</li>
+            <li><svg><use href="#i-check"/></svg>1 Revizyon Hakkı</li>
+            <li><svg><use href="#i-check"/></svg>Tanıtım Videosu</li>
+            <li><svg><use href="#i-check"/></svg>İlk 3 Ay Ücretsiz Bakım</li>
+          </ul>
+          <a href="siparis.html?paket=profesyonel" class="pcard__btn">Paket Seç <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="pcard">
+          <h3 class="pcard__title">Premium Paket</h3>
+          <p class="pcard__sub">Tam kapsamlı çözüm.</p>
+          <p class="pcard__price"><span>₺</span>49.999</p>
+          <ul class="pcard__list">
+            <li><svg><use href="#i-check"/></svg>Kişiye Özel Tasarım</li>
+            <li><svg><use href="#i-check"/></svg>Domain</li>
+            <li><svg><use href="#i-check"/></svg>Hosting</li>
+            <li><svg><use href="#i-check"/></svg>SSL Sertifikası</li>
+            <li><svg><use href="#i-check"/></svg>Temel SEO</li>
+            <li><svg><use href="#i-check"/></svg>3 Revizyon Hakkı</li>
+            <li><svg><use href="#i-check"/></svg>Tanıtım Videosu</li>
+            <li><svg><use href="#i-check"/></svg>Logo ve Kartvizit Tasarımı</li>
+            <li><svg><use href="#i-check"/></svg>6 Ay Ücretsiz Bakım</li>
+          </ul>
+          <a href="siparis.html?paket=premium" class="pcard__btn">Paket Seç <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ====== Footer ====== -->
+<footer class="footer" id="iletisim">
+  <div class="footer__mcta m-only">
+    <a href="tel:+905550459337" class="btn btn--primary">Teklif Al <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
+    <a href="tel:+905550459337" class="phone"><svg class="ico"><use href="#i-phone"/></svg>0555 045 93 37</a>
+  </div>
+  <img src="assets/footer-temple.jpg" alt="" class="footer__temple" aria-hidden="true" loading="lazy">
+  <div class="container footer__top">
+    <a href="#anasayfa" class="logo" aria-label="Montra Studio ana sayfa">
+      <svg class="logo__mark"><use href="#i-logo"/></svg>
+      <span class="logo__text"><span class="logo__name">MONTRΛ</span><span class="logo__sub">STUDIO</span></span>
+    </a>
+    <ul class="footer__links">
+      <li><a href="#anasayfa">Ana Sayfa</a></li>
+      <li><a href="#hizmetler">Hizmetler</a></li>
+      <li><a href="#portfolyo">Portfolyo</a></li>
+      <li><a href="#paketler">Paketler</a></li>
+      <li><a href="#hakkimizda">Hakkımızda</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+    <ul class="footer__social">
+      <li><a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a></li>
+      <li><a href="#" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a></li>
+      <li><a href="#" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a></li>
+      <li><a href="#" aria-label="X"><svg><use href="#i-x"/></svg></a></li>
+    </ul>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Montra Studio. Tüm hakları saklıdır.</p>
+    <a href="tel:+905550459337" class="phone"><svg class="ico"><use href="#i-phone"/></svg>0555 045 93 37</a>
+    <p><a href="#">Gizlilik Politikası</a><span>|</span><a href="#">Kullanım Koşulları</a></p>
+  </div>
+</footer>
+
+<!-- Video modal -->
+<div class="vmodal" id="videoModal" aria-hidden="true" role="dialog" aria-label="Tanıtım videosu">
+  <div class="vmodal__box">
+    <button type="button" class="vmodal__close" aria-label="Kapat">×</button>
+    <div class="vmodal__frame"><p>Tanıtım videosu yakında burada.</p></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
