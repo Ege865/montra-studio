@@ -117,14 +117,17 @@
       .fromTo('.hero__actions', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 1 }, 1.05);
 
     // Neon ışık nefes alma
+    gsap.fromTo('.hero__neonimg', { autoAlpha: 0, clipPath: 'inset(100% 0 0 0)' }, { autoAlpha: 1, clipPath: 'inset(0% 0 0 0)', duration: 1.6, ease: 'power3.inOut', delay: 0.6 });
+    gsap.to('.hero__neonimg', { opacity: 0.75, duration: 1.8, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 2.3 });
+    gsap.fromTo('.hero__arch', { autoAlpha: 0, x: 40 }, { autoAlpha: 0.42, x: 0, duration: 2, ease: 'power2.out', delay: 0.3 });
     gsap.to('.hero__neon', { opacity: 1, scale: 1.08, duration: 2.4, ease: 'sine.inOut', yoyo: true, repeat: -1 });
     // Play butonu halka dalgası
     gsap.timeline({ repeat: -1, repeatDelay: 1.2, delay: 2 })
       .fromTo('.play__circle', { boxShadow: '0 0 0 0 rgba(255,31,102,.45)' }, { boxShadow: '0 0 0 14px rgba(255,31,102,0)', duration: 1.4, ease: 'power2.out' });
 
     // Hero kaydırma parallax
-    gsap.to('.hero__img', {
-      yPercent: 10, ease: 'none',
+    gsap.to('.hero__stage', {
+      yPercent: 8, ease: 'none',
       scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true },
     });
     gsap.to('.hero__content', {
@@ -134,8 +137,8 @@
 
     // Fare ile heykel parallax (sadece masaüstü)
     if (desktop && matchMedia('(pointer: fine)').matches) {
-      const qx = gsap.quickTo('.hero__img', 'x', { duration: 1.2, ease: 'power3.out' });
-      const qy = gsap.quickTo('.hero__img', 'y', { duration: 1.2, ease: 'power3.out' });
+      const qx = gsap.quickTo('.hero__stage', 'x', { duration: 1.2, ease: 'power3.out' });
+      const qy = gsap.quickTo('.hero__stage', 'y', { duration: 1.2, ease: 'power3.out' });
       const hero = $('.hero');
       const move = (e) => {
         const r = hero.getBoundingClientRect();
@@ -162,9 +165,13 @@
     });
 
     /* --- Portfolyo --- */
-    const pMedia = desktop ? '.portfolio__strip' : '.portfolio__laptop';
+    const pMedia = desktop ? '.ptile img' : '.portfolio__laptop';
     gsap.fromTo('.portfolio__media', { clipPath: 'inset(0 0 0 100%)' }, {
       clipPath: 'inset(0 0 0 0%)', duration: 1.6, ease: 'power3.inOut',
+      scrollTrigger: { trigger: '.portfolio', start: 'top 85%', once: true },
+    });
+    if (desktop) gsap.fromTo('.ptile', { yPercent: 18, autoAlpha: 0 }, {
+      yPercent: 0, autoAlpha: (i, el) => (el.classList.contains('ptile--ghost') ? 0.35 : 1), duration: 1.2, stagger: 0.12, ease: 'power3.out',
       scrollTrigger: { trigger: '.portfolio', start: 'top 85%', once: true },
     });
     gsap.fromTo(pMedia, { scale: 1.15 }, {

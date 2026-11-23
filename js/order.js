@@ -340,6 +340,9 @@
     .fromTo('[data-o]', { autoAlpha: 0, y: 26 }, { autoAlpha: 1, y: 0, duration: 1, stagger: 0.08 }, 0.1)
     .fromTo('.steps li', { scale: 0.9, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.6, stagger: 0.08, ease: 'back.out(2)' }, 0.6);
 
+  gsap.fromTo('.ohero__mono', { autoAlpha: 0, scale: 0.85, rotate: -6 }, { autoAlpha: 1, scale: 1, rotate: 0, duration: 1.6, ease: 'power3.out', delay: 0.2 });
+  gsap.fromTo('.ohero__arc', { autoAlpha: 0, clipPath: 'inset(0 0 100% 0)' }, { autoAlpha: 0.9, clipPath: 'inset(0 0 0% 0)', duration: 1.8, ease: 'power3.inOut', delay: 0.4 });
+  gsap.to('.ohero__mono', { y: -10, duration: 3, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 1.8 });
   gsap.fromTo('.oblock', { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.9, stagger: 0.12, ease: 'power3.out', delay: 0.35 });
   gsap.fromTo('.pkg', { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.06, ease: 'power3.out', delay: 0.6 });
   gsap.fromTo('.cart__card', { autoAlpha: 0, x: 30 }, { autoAlpha: 1, x: 0, duration: 1, ease: 'power3.out', delay: 0.5 });

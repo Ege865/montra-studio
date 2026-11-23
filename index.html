@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Montra Studio — Markanızı Geleceğe Taşıyoruz</title>
   <meta name="description" content="Montra Studio; web tasarım, web yazılım, logo ve marka kimliği, tanıtım videosu ve dijital pazarlama hizmetleri sunan dijital tasarım ajansı.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <meta name="theme-color" content="#060606">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,14 +91,14 @@
 <main>
   <!-- ====== Hero ====== -->
   <section class="hero" id="anasayfa">
-    <svg class="hero__curves" viewBox="0 0 1440 520" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M-40 120C220 40 420 170 610 90S900 -20 1120 40" />
-      <path d="M-60 360C180 250 380 330 560 230S820 60 1000 110" />
-      <path d="M200 560C320 380 520 330 640 300" />
-    </svg>
+    <img src="assets/akiskan-doku.jpg" alt="" class="hero__flow" aria-hidden="true">
     <div class="hero__visual" aria-hidden="true">
-      <img src="assets/hero-statue.jpg" alt="" class="hero__img" fetchpriority="high">
-      <span class="hero__neon"></span>
+      <img src="assets/mimari-kemer.jpg" alt="" class="hero__arch">
+      <div class="hero__stage">
+        <img src="assets/heykel-01.jpg" alt="" class="hero__img" fetchpriority="high">
+        <img src="assets/neon-geometri.jpg" alt="" class="hero__neonimg">
+        <span class="hero__neon"></span>
+      </div>
     </div>
 
     <div class="container hero__content" id="hakkimizda">
@@ -170,8 +171,13 @@
   <!-- ====== Portfolyo ====== -->
   <section class="portfolio" id="portfolyo">
     <div class="portfolio__media" aria-hidden="true">
-      <img src="assets/portfolio-strip.jpg" alt="" class="portfolio__strip" loading="lazy">
-      <img src="assets/portfolio-laptop.jpg" alt="" class="portfolio__laptop" loading="lazy">
+      <div class="ptiles">
+        <div class="ptile ptile--laptop"><img src="assets/laptop-mockup.jpg" alt="" loading="lazy"></div>
+        <div class="ptile ptile--phone"><img src="assets/telefon-mockup.jpg" alt="" loading="lazy"></div>
+        <div class="ptile ptile--statue"><img src="assets/heykel-03.jpg" alt="" loading="lazy"></div>
+        <div class="ptile ptile--ghost"><img src="assets/monogram-3d.jpg" alt="" loading="lazy"></div>
+      </div>
+      <img src="assets/laptop-mockup.jpg" alt="" class="portfolio__laptop" loading="lazy">
     </div>
     <div class="container portfolio__inner">
       <div class="portfolio__text">
@@ -266,7 +272,7 @@
     <a href="tel:+905550459337" class="btn btn--primary">Teklif Al <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
     <a href="tel:+905550459337" class="phone"><svg class="ico"><use href="#i-phone"/></svg>0555 045 93 37</a>
   </div>
-  <img src="assets/footer-temple.jpg" alt="" class="footer__temple" aria-hidden="true" loading="lazy">
+  <img src="assets/mimari-sutun.jpg" alt="" class="footer__temple" aria-hidden="true" loading="lazy">
   <div class="container footer__top">
     <a href="#anasayfa" class="logo" aria-label="Montra Studio ana sayfa">
       <svg class="logo__mark"><use href="#i-logo"/></svg>
