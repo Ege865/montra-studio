@@ -6,7 +6,7 @@
 .nav__list { gap: 36px; }
 
 .about { display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center; }
-.about__img { border-radius: 16px; overflow: hidden; border: 1px solid var(--line); aspect-ratio: 512/356; background: #000; }
+.about__img { border-radius: 16px; overflow: hidden; border: 1px solid var(--line); aspect-ratio: 808/456; background: #000; }
 .about__img img { width: 100%; height: 100%; object-fit: cover; }
 .about p.sec__lead + p.sec__lead { margin-top: 14px; }
 .about__list { margin-top: 24px; display: grid; gap: 12px; }
@@ -104,7 +104,7 @@
 .pv--wire .pv__pic { border: 1.5px dashed #62626b; background: linear-gradient(to top right, transparent 49.6%, #4b4b53 50%, transparent 50.4%), linear-gradient(to bottom right, transparent 49.6%, #4b4b53 50%, transparent 50.4%); }
 .pv--wire .pv__hero i:nth-child(4) { border-color: var(--pink); }
 .pv--art { color: #f4f4f5; }
-.pv--art .pv__pic { background: url("../assets/heykel-01.jpg") center / cover; }
+.pv--art .pv__pic { background: url("../assets/heykel-06.jpg") 58% center / cover; }
 .pv--art .pv__hero i:nth-child(2), .pv--art .pv__hero i:nth-child(4) { background: var(--pink); }
 .pv--art .pv__cards i { background: linear-gradient(160deg, #222226, #141417); border: 1px solid var(--line); }
 .pv--live > img { width: 100%; height: calc(100% - 6.5cqw); object-fit: cover; object-position: top; }
@@ -119,4 +119,11 @@
   .is-ready .proc__step .pv { display: none; }
   .proc__line { position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--line); }
   .proc__line::after { content: ""; position: absolute; inset: 0; background: var(--pink); transform: scaleY(var(--p, 0)); transform-origin: top; }
+}
+
+/* Mobil paket kartları: her kartta farklı görsel */
+@media (max-width: 680px) {
+  .pricing__cards .pcard:nth-child(2)::after { background-image: url("../assets/heykel-07.jpg"); background-position: 30% top; }
+  .pricing__cards .pcard:nth-child(3)::after { background-image: url("../assets/heykel-01.jpg"); background-position: 56% top; }
+  .pricing__cards .pcard:nth-child(4)::after { background-image: url("../assets/mimari-kemer.jpg"); background-position: 45% top; }
 }
