@@ -14,8 +14,8 @@
   --pink: #ff1f66;
   --pink-2: #ff3d7c;
   --pink-glow: rgba(255, 31, 102, .45);
-  --font-head: "Archivo", "Inter", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-head: "Melodrama", Georgia, serif;
+  --font-body: "Chubbo", Rockwell, Georgia, serif;
   --container: 1250px;
   --gutter: 24px;
   --radius: 12px;
@@ -51,7 +51,7 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
 /* ---------- Tipografi ---------- */
 .eyebrow {
   color: var(--pink);
-  font-family: var(--font-head);
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -.005em;
@@ -60,10 +60,10 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
 .eyebrow--sm { font-size: 13px; margin-bottom: 6px; }
 .h2 {
   font-family: var(--font-head);
-  font-stretch: 112%;
+ 
   font-weight: 600;
-  font-size: clamp(26px, 2.3vw, 31px);
-  line-height: 1.08;
+  font-size: clamp(34px, 3vw, 42px);
+  line-height: 1.04;
   letter-spacing: -.01em;
 }
 .accent { color: var(--pink); }
@@ -103,7 +103,8 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
 .logo { display: inline-flex; align-items: center; gap: 14px; }
 .logo__mark { width: 50px; height: 31px; color: #fff; }
 .logo__text { display: flex; flex-direction: column; align-items: center; line-height: 1; }
-.logo__name { font-family: var(--font-body); font-weight: 500; font-size: 14px; letter-spacing: .32em; margin-right: -.32em; }
+.logo__text { font-family: "Helvetica Neue", Arial, sans-serif; }
+.logo__name { font-weight: 500; font-size: 14px; letter-spacing: .32em; margin-right: -.32em; }
 .logo__sub { font-size: 6.5px; letter-spacing: .62em; margin-right: -.62em; margin-top: 5px; color: #d7d7da; }
 
 /* ---------- Header ---------- */
@@ -153,7 +154,7 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
 }
 .mmenu__list a {
   display: block; padding: 8px 0;
-  font-family: var(--font-head); font-stretch: 112%; font-weight: 600; font-size: 32px; line-height: 1.15;
+  font-family: var(--font-head); font-weight: 600; font-size: 38px; line-height: 1.15;
 }
 .mmenu__list a:hover { color: var(--pink); }
 .mmenu__cta { align-self: flex-start; }
@@ -213,10 +214,10 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
 .hero__content { position: relative; padding-bottom: 64px; }
 .hero__title {
   font-family: var(--font-head);
-  font-stretch: 115%;
+ 
   font-weight: 600;
-  font-size: clamp(40px, 3.6vw, 56px);
-  line-height: .98;
+  font-size: clamp(50px, 4.7vw, 72px);
+  line-height: .96;
   letter-spacing: -.015em;
   margin-bottom: 22px;
 }
@@ -269,7 +270,7 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
 .scard:hover { border-color: rgba(255, 31, 102, .45); transform: translateY(-4px); box-shadow: 0 18px 40px -20px rgba(255,31,102,.45); }
 .scard:hover::before { opacity: 1; }
 .scard__icon { width: 30px; height: 30px; color: #fff; margin-bottom: 10px; }
-.scard__title { font-family: var(--font-head); font-stretch: 105%; font-weight: 600; font-size: 14.5px; margin-bottom: 6px; }
+.scard__title { font-family: var(--font-body); font-weight: 600; font-size: 14.5px; margin-bottom: 6px; }
 .scard__text { font-size: 11px; color: var(--muted); line-height: 1.5; max-width: 74%; }
 .scard__arrow {
   position: absolute; right: 16px; bottom: 18px; width: 17px; height: 17px; color: var(--pink);
@@ -335,10 +336,10 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
   background: var(--pink); color: #1c0610;
   font-size: 9.5px; font-weight: 600; padding: 2px 10px; border-radius: 999px; white-space: nowrap;
 }
-.pcard__title { font-family: var(--font-head); font-stretch: 105%; font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+.pcard__title { font-family: var(--font-body); font-weight: 600; font-size: 14px; margin-bottom: 4px; }
 .pcard__sub { font-size: 10.5px; color: var(--muted); margin-bottom: 16px; }
 .pcard__price {
-  font-family: var(--font-head); font-stretch: 108%; font-weight: 600; font-size: 24px; line-height: 1;
+  font-family: var(--font-body); font-weight: 600; font-size: 25px; line-height: 1;
   margin-bottom: 14px; font-variant-numeric: tabular-nums;
 }
 .pcard__price span { font-size: .86em; margin-right: 1px; }
@@ -457,7 +458,7 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
   .hero__flow { width: 100%; opacity: .35; }
   .hero__neon { left: 62%; top: 22%; }
   .eyebrow { font-size: 13px; margin-bottom: 8px; }
-  .hero__title { font-size: clamp(34px, 9.6vw, 42px); line-height: 1.02; margin-bottom: 20px; }
+  .hero__title { font-size: clamp(42px, 12vw, 52px); line-height: 1.02; margin-bottom: 20px; }
   .hero__text { max-width: 300px; font-size: 12.5px; margin-bottom: 26px; text-shadow: 0 1px 12px rgba(0,0,0,.9); }
   .hero__actions { gap: 14px; }
   .hero__actions .btn { height: 44px; padding: 0 24px; font-size: 12px; }
@@ -470,7 +471,7 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
   .services__head { grid-template-columns: 1fr auto; align-items: end; gap: 12px; margin-bottom: 20px; }
   .services__desc { display: none; }
   .services__head .link { padding: 0 0 6px; font-size: 12px; }
-  .h2 { font-size: 22px; line-height: 1.14; font-stretch: 102%; }
+  .h2 { font-size: 29px; line-height: 1.08; }
   .services__grid {
     display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
     margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter);
