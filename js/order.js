@@ -8,22 +8,22 @@
 
   const PACKAGES = {
     tasarim: {
-      name: 'Tasarım Paketi', price: 14999,
+      name: 'Tasarım Paketi', price: 2999,
       features: ['Kişiye Özel Tasarım', 'Kod Dosyası Teslimi'],
       includes: [],
     },
     baslangic: {
-      name: 'Başlangıç Paketi', price: 24999, popular: true,
+      name: 'Başlangıç Paketi', price: 6999, popular: true,
       features: ['Kişiye Özel Tasarım', 'Domain', 'Hosting', 'SSL Sertifikası', 'Kod Dosyası Teslimi'],
       includes: ['domain'],
     },
     profesyonel: {
-      name: 'Profesyonel Paket', price: 34999,
+      name: 'Profesyonel Paket', price: 11999,
       features: ['Kişiye Özel Tasarım', 'Domain', 'Hosting', 'SSL Sertifikası', 'Temel SEO', '1 Revizyon Hakkı', 'Tanıtım Videosu', 'İlk 3 Ay Ücretsiz Bakım'],
       includes: ['domain', 'seo', 'video'],
     },
     premium: {
-      name: 'Premium Paket', price: 49999,
+      name: 'Premium Paket', price: 17999,
       features: ['Kişiye Özel Tasarım', 'Domain', 'Hosting', 'SSL Sertifikası', 'Temel SEO', '3 Revizyon Hakkı', 'Tanıtım Videosu', 'Logo ve Kartvizit Tasarımı', '6 Ay Ücretsiz Bakım'],
       includes: ['domain', 'seo', 'video', 'logo', 'kartvizit'],
     },
@@ -31,16 +31,16 @@
 
   // qty: true → adet seçilebilen hizmet (fiyat adet başına)
   const ADDONS = [
-    { id: 'hizli', icon: 'i-bolt', title: 'Hızlı Teslim', desc: 'Projeniz öncelikli sıraya alınır, teslim süresi kısalır.', price: 4999 },
-    { id: 'bakim', icon: 'i-shield', title: '1 Yıl Bakım Paketi', desc: 'Güncellemeler, yedekleme ve teknik destek.', price: 7999 },
-    { id: 'revizyon', icon: 'i-refresh', title: 'Ek Revizyon Hakkı', desc: 'Paketinizdeki haklara ek revizyon.', price: 1499, qty: true, max: 10 },
-    { id: 'domain', icon: 'i-server', title: 'Domain + Hosting + SSL', desc: '1 yıllık alan adı, sunucu ve güvenlik sertifikası.', price: 1999 },
-    { id: 'seo', icon: 'i-search', title: 'Temel SEO Kurulumu', desc: 'Google için temel optimizasyon ve kayıtlar.', price: 2999 },
-    { id: 'video', icon: 'i-video', title: 'Tanıtım Videosu', desc: 'Markanızı anlatan kısa tanıtım videosu.', price: 5999 },
-    { id: 'logo', icon: 'i-feather', title: 'Logo Tasarımı', desc: 'Markanıza özgün logo ve renk paleti.', price: 3999 },
-    { id: 'kartvizit', icon: 'i-card', title: 'Kartvizit Tasarımı', desc: 'Baskıya hazır kartvizit dosyaları.', price: 1499 },
-    { id: 'sosyal', icon: 'i-grid', title: 'Sosyal Medya Kiti', desc: 'Profil, kapak ve gönderi şablonları.', price: 2499 },
-    { id: 'dil', icon: 'i-globe', title: 'Ek Dil Desteği', desc: 'Sitenize ikinci bir dil seçeneği.', price: 3999 },
+    { id: 'hizli', icon: 'i-bolt', title: 'Hızlı Teslim', desc: 'Projeniz öncelikli sıraya alınır, teslim süresi kısalır.', price: 999 },
+    { id: 'bakim', icon: 'i-shield', title: '1 Yıl Bakım Paketi', desc: 'Güncellemeler, yedekleme ve teknik destek.', price: 2499 },
+    { id: 'revizyon', icon: 'i-refresh', title: 'Ek Revizyon Hakkı', desc: 'Paketinizdeki haklara ek revizyon.', price: 399, qty: true, max: 10 },
+    { id: 'domain', icon: 'i-server', title: 'Domain + Hosting + SSL', desc: '1 yıllık alan adı, sunucu ve güvenlik sertifikası.', price: 1499 },
+    { id: 'seo', icon: 'i-search', title: 'Temel SEO Kurulumu', desc: 'Google için temel optimizasyon ve kayıtlar.', price: 999 },
+    { id: 'video', icon: 'i-video', title: 'Tanıtım Videosu', desc: 'Markanızı anlatan kısa tanıtım videosu.', price: 1999 },
+    { id: 'logo', icon: 'i-feather', title: 'Logo Tasarımı', desc: 'Markanıza özgün logo ve renk paleti.', price: 1499 },
+    { id: 'kartvizit', icon: 'i-card', title: 'Kartvizit Tasarımı', desc: 'Baskıya hazır kartvizit dosyaları.', price: 499 },
+    { id: 'sosyal', icon: 'i-grid', title: 'Sosyal Medya Kiti', desc: 'Profil, kapak ve gönderi şablonları.', price: 799 },
+    { id: 'dil', icon: 'i-globe', title: 'Ek Dil Desteği', desc: 'Sitenize ikinci bir dil seçeneği.', price: 1499 },
   ];
 
   /* ---------- Yardımcılar ---------- */
@@ -284,8 +284,8 @@
     }
     activeStep = 3; updateSteps();
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(buildMessage())}`;
-    const win = window.open(url, '_blank', 'noopener');
-    if (!win) location.href = url;
+    const win = window.open(url, '_blank');
+    if (win) win.opener = null; else location.href = url;
   };
   $('#sendBtn').addEventListener('click', send);
   $('#mbarBtn').addEventListener('click', send);

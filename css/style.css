@@ -372,6 +372,7 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
 
 /* ---------- Footer ---------- */
 .footer { position: relative; border-top: 1px solid var(--line); background: var(--bg) url("../assets/tas-doku.jpg") center / cover no-repeat; }
+.footer > .container, .footer__mcta { position: relative; z-index: 2; }
 .footer::before { content: ""; position: absolute; inset: 0; background: rgba(6, 6, 6, .78); pointer-events: none; }
 .footer__temple {
   position: absolute; right: max(4%, calc((100% - var(--container)) / 2 + 20px)); bottom: 58px;
