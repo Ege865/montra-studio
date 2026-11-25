@@ -33,14 +33,14 @@
   const ADDONS = [
     { id: 'hizli', icon: 'i-bolt', title: 'Hızlı Teslim', desc: 'Projeniz öncelikli sıraya alınır, teslim süresi kısalır.', price: 999 },
     { id: 'bakim', icon: 'i-shield', title: '1 Yıl Bakım Paketi', desc: 'Güncellemeler, yedekleme ve teknik destek.', price: 2499 },
-    { id: 'revizyon', icon: 'i-refresh', title: 'Ek Revizyon Hakkı', desc: 'Paketinizdeki haklara ek revizyon.', price: 399, qty: true, max: 10 },
-    { id: 'domain', icon: 'i-server', title: 'Domain + Hosting + SSL', desc: '1 yıllık alan adı, sunucu ve güvenlik sertifikası.', price: 1499 },
-    { id: 'seo', icon: 'i-search', title: 'Temel SEO Kurulumu', desc: 'Google için temel optimizasyon ve kayıtlar.', price: 999 },
-    { id: 'video', icon: 'i-video', title: 'Tanıtım Videosu', desc: 'Markanızı anlatan kısa tanıtım videosu.', price: 1999 },
-    { id: 'logo', icon: 'i-feather', title: 'Logo Tasarımı', desc: 'Markanıza özgün logo ve renk paleti.', price: 1499 },
-    { id: 'kartvizit', icon: 'i-card', title: 'Kartvizit Tasarımı', desc: 'Baskıya hazır kartvizit dosyaları.', price: 499 },
+    { id: 'revizyon', icon: 'i-refresh', title: 'Ek Revizyon Hakkı', desc: 'Paketinizdeki haklara ek revizyon.', price: 699, qty: true, max: 10 },
+    { id: 'domain', icon: 'i-server', title: 'Domain + Hosting + SSL', desc: '1 yıllık alan adı, sunucu ve güvenlik sertifikası.', price: 2999 },
+    { id: 'seo', icon: 'i-search', title: 'Temel SEO Kurulumu', desc: 'Google için temel optimizasyon ve kayıtlar.', price: 1999 },
+    { id: 'video', icon: 'i-video', title: 'Tanıtım Videosu', desc: 'Markanızı anlatan kısa tanıtım videosu.', price: 1999, note: 'Fiyat videoya göre değişebilir.' },
+    { id: 'logo', icon: 'i-feather', title: 'Logo Tasarımı', desc: 'Markanıza özgün logo ve renk paleti.', price: 499 },
+    { id: 'kartvizit', icon: 'i-card', title: 'Kartvizit Tasarımı', desc: 'Baskıya hazır kartvizit dosyaları.', price: 999 },
     { id: 'sosyal', icon: 'i-grid', title: 'Sosyal Medya Kiti', desc: 'Profil, kapak ve gönderi şablonları.', price: 799 },
-    { id: 'dil', icon: 'i-globe', title: 'Ek Dil Desteği', desc: 'Sitenize ikinci bir dil seçeneği.', price: 1499 },
+    { id: 'dil', icon: 'i-globe', title: 'Ek Dil Desteği', desc: 'Sitenize ikinci bir dil seçeneği.', price: 999 },
   ];
 
   /* ---------- Yardımcılar ---------- */
@@ -96,7 +96,7 @@
       <${tag} class="addon" data-addon="${a.id}">
         ${a.qty ? '' : `<input type="checkbox" class="addon__input" aria-label="${a.title}">`}
         <span class="addon__icon" aria-hidden="true"><svg><use href="#${a.icon}"/></svg></span>
-        <span class="addon__body"><span class="addon__title">${a.title}</span><span class="addon__desc">${a.desc}</span></span>
+        <span class="addon__body"><span class="addon__title">${a.title}</span><span class="addon__desc">${a.desc}</span>${a.note ? `<small class="addon__note">* ${a.note}</small>` : ''}</span>
         <span class="addon__side">${price}${control}</span>
       </${tag}>`;
   }).join('');
@@ -129,6 +129,8 @@
       if (inc && !badge) side.insertAdjacentHTML('afterbegin', '<span class="addon__badge">Pakete dahil</span>');
       if (!inc && badge) badge.remove();
       $('.addon__price', side).hidden = inc;
+      const note = $('.addon__note', card);
+      if (note) note.hidden = inc;
       if (a.qty) {
         $('.stepper', card).hidden = inc;
         $('output', card).textContent = n;
@@ -152,7 +154,7 @@
     const list = selected();
     els.cartLines.innerHTML = list.map((a) => `
       <li class="cart__line" data-line="${a.id}">
-        <span>${a.title}${a.qty ? ` × ${a.n}` : ''}</span>
+        <span>${a.title}${a.qty ? ` × ${a.n}` : ''}${a.note ? `<small class="addon__note">* ${a.note}</small>` : ''}</span>
         <span class="cart__lineR"><strong>${fmt(a.sum)}</strong>
           <button type="button" class="cart__remove" data-remove="${a.id}" aria-label="${a.title} hizmetini kaldır"><svg><use href="#i-trash"/></svg></button>
         </span>
@@ -265,7 +267,7 @@
     const list = selected();
     if (list.length) {
       lines.push('', '*Ek Hizmetler:*');
-      list.forEach((a) => lines.push(`• ${a.title}${a.qty ? ` x${a.n}` : ''} - ${fmt(a.sum)}`));
+      list.forEach((a) => lines.push(`• ${a.title}${a.qty ? ` x${a.n}` : ''} - ${fmt(a.sum)}${a.note ? ` (${a.note})` : ''}`));
     }
     lines.push('', `*Toplam:* ${fmt(total())}`, '');
     if (state.name.trim()) lines.push(`*Ad / Firma:* ${state.name.trim()}`);

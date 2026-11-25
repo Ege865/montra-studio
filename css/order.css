@@ -231,3 +231,5 @@
   .mbar__sum strong { font-family: var(--font-head); font-stretch: 108%; font-weight: 600; font-size: 20px; font-variant-numeric: tabular-nums; }
   .mbar .btn--wa { width: auto; height: 46px; padding: 0 22px; }
 }
+
+.addon__note { display: block; margin-top: 3px; font-size: 10.5px; line-height: 1.4; color: var(--muted); }
