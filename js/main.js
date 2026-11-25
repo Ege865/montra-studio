@@ -23,7 +23,7 @@
 
   /* ---------- Aktif menü linki ---------- */
   const navLinks = $$('.nav__link');
-  ['anasayfa', 'hizmetler', 'portfolyo', 'paketler', 'iletisim'].forEach((id) => {
+  ['anasayfa', 'hizmetler', 'portfolyo', 'paketler', 'hakkimizda', 'sss', 'iletisim'].forEach((id) => {
     const sec = document.getElementById(id);
     if (!sec) return;
     ScrollTrigger.create({

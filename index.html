@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Inter:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/pages.css?v=6">
   <script>
     document.documentElement.classList.add('js');
     // GSAP yüklenemezse içerik gizli kalmasın
@@ -46,6 +47,7 @@
     <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M22.5 7.2a2.8 2.8 0 0 0-2-2C18.8 4.8 12 4.8 12 4.8s-6.8 0-8.5.4a2.8 2.8 0 0 0-2 2C1 8.9 1 12 1 12s0 3.1.5 4.8a2.8 2.8 0 0 0 2 2c1.7.4 8.5.4 8.5.4s6.8 0 8.5-.4a2.8 2.8 0 0 0 2-2c.5-1.7.5-4.8.5-4.8s0-3.1-.5-4.8zM9.8 15.1V8.9l5.6 3.1z"/></symbol>
     <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM8 19H5V9.5h3zM6.5 8.2a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5S12.8 13 12.8 14.3V19h-3V9.5h2.9v1.3c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.7z"/></symbol>
     <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M21 16.6v2.9a1.9 1.9 0 0 1-2.1 1.9 18.9 18.9 0 0 1-8.2-2.9 18.6 18.6 0 0 1-5.7-5.7A18.9 18.9 0 0 1 2.1 4.6 1.9 1.9 0 0 1 4 2.5h2.9a1.9 1.9 0 0 1 1.9 1.6c.1.9.4 1.8.7 2.7a1.9 1.9 0 0 1-.4 2L7.8 10a15.2 15.2 0 0 0 5.7 5.7l1.3-1.3a1.9 1.9 0 0 1 2-.4c.9.3 1.8.6 2.7.7a1.9 1.9 0 0 1 1.6 1.9z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.2-1.4A9.9 9.9 0 1 0 12 2zm0 18.1c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.1zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.8.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.2z"/></symbol>
     <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></symbol>
   </defs>
 </svg>
@@ -64,6 +66,7 @@
         <li><a href="#portfolyo" class="nav__link">Portfolyo</a></li>
         <li><a href="#paketler" class="nav__link">Paketler</a></li>
         <li><a href="#hakkimizda" class="nav__link">Hakkımızda</a></li>
+        <li><a href="#sss" class="nav__link">SSS</a></li>
         <li><a href="#iletisim" class="nav__link">İletişim</a></li>
       </ul>
     </nav>
@@ -82,6 +85,7 @@
     <li><a href="#portfolyo">Portfolyo</a></li>
     <li><a href="#paketler">Paketler</a></li>
     <li><a href="#hakkimizda">Hakkımızda</a></li>
+    <li><a href="#sss">SSS</a></li>
     <li><a href="#iletisim">İletişim</a></li>
   </ul>
   <a href="tel:+905550459337" class="btn btn--primary mmenu__cta">Teklif Al <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
@@ -101,7 +105,7 @@
       </div>
     </div>
 
-    <div class="container hero__content" id="hakkimizda">
+    <div class="container hero__content">
       <p class="eyebrow" data-hero>Dijital Dünyada Güçlü Adım</p>
       <h1 class="hero__title">
         <span class="line"><span class="line__in">Markanızı</span></span>
@@ -184,7 +188,31 @@
         <p class="eyebrow eyebrow--sm" data-reveal>Portfolyo</p>
         <h2 class="h2" data-reveal>Yaptığımız<br>Projeler</h2>
         <p class="portfolio__desc" data-reveal>Fark yaratan projelerimizle<br>ilham alın.</p>
-        <a href="#portfolyo" class="btn btn--ghost btn--sm" data-reveal><span class="d-only">Tüm Projeleri Gör</span><span class="m-only">Tümünü Gör</span> <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a href="#mybike" class="btn btn--ghost btn--sm" data-reveal><span class="d-only">Tüm Projeleri Gör</span><span class="m-only">Tümünü Gör</span> <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Proje: My Bike Bursa ====== -->
+  <section class="sec" id="mybike">
+    <div class="container project">
+      <div class="project__shots" data-reveal>
+        <img class="project__site" src="assets/mybike-site.jpg" width="1440" height="900" alt="My Bike Bursa ana sayfası" loading="lazy">
+        <img class="project__panel" src="assets/mybike-panel.jpg" width="1440" height="900" alt="My Bike Bursa yönetim paneli giriş ekranı" loading="lazy">
+        <img class="project__phone" src="assets/mybike-mobil.jpg" width="780" height="1688" alt="My Bike Bursa mobil görünümü" loading="lazy">
+      </div>
+      <div data-reveal>
+        <h3>My Bike Bursa</h3>
+        <p class="sec__lead">Downhill ve enduro bisikletleri, yedek parça ve atölye hizmetleri için hazırlanan ürün kataloğu. Ürünler yönetim panelinden eklenip düzenleniyor.</p>
+        <ul class="about__list">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Ürün kataloğu, arama ve sepet</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Atölye hizmetleri ve servis randevusu</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Şifre korumalı yönetim paneli</li>
+        </ul>
+        <div class="project__btns">
+          <a class="btn btn--primary" href="https://ege865.github.io/mybike-bursa/" target="_blank" rel="noopener">Siteyi gör <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
+          <a class="btn btn--ghost" href="https://ege865.github.io/mybike-bursa/admin.html" target="_blank" rel="noopener nofollow">Yönetim paneli <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
+        </div>
       </div>
     </div>
   </section>
@@ -264,10 +292,69 @@
     </div>
   </section>
 
+  <!-- ====== Süreç ====== -->
+  <section class="sec" id="surec">
+    <div class="container">
+      <div class="sec__head" data-reveal><h2 class="h2">Nasıl Çalışıyoruz?</h2><p class="sec__lead">İlk mesajınızdan yayına kadar dört adım.</p></div>
+      <ol class="flow">
+        <li data-reveal><h3>Sizi dinliyoruz</h3><p>İşinizi, beğendiğiniz siteleri ve ihtiyaçlarınızı konuşuyoruz.</p></li>
+        <li data-reveal><h3>Tasarlıyoruz</h3><p>Markanıza özel tasarımı hazırlayıp onayınıza sunuyoruz.</p></li>
+        <li data-reveal><h3>Geliştiriyoruz</h3><p>Onaylanan tasarımı bilgisayar ve telefonda çalışan bir siteye dönüştürüyoruz.</p></li>
+        <li data-reveal><h3>Teslim ediyoruz</h3><p>Paketinize göre siteyi yayına alıyor veya kod dosyalarını teslim ediyoruz.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ====== Hakkımızda ====== -->
+  <section class="sec" id="hakkimizda">
+    <div class="container about">
+      <div data-reveal>
+        <p class="eyebrow eyebrow--sm">Hakkımızda</p>
+        <h2 class="h2">Montra Studio Kimdir?</h2>
+        <p class="sec__lead" style="margin-top:14px">Montra Studio, web tasarım ve yazılım üreten bir dijital tasarım stüdyosudur. İşletmelerin internette kendini doğru anlatması için site, logo, tanıtım videosu ve marka kimliği hazırlıyoruz.</p>
+        <p class="sec__lead">Hazır şablon satmıyoruz. Her projeye işletmeyi tanıyarak başlıyor, tasarımı ona göre kuruyoruz.</p>
+        <ul class="about__list">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Kişiye özel tasarım</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>İçeriği önceden belli olan paketler</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>WhatsApp’tan doğrudan iletişim</li>
+        </ul>
+      </div>
+      <div class="about__img" data-reveal><img src="assets/heykel-02.jpg" width="512" height="356" alt="" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- ====== SSS ====== -->
+  <section class="sec" id="sss">
+    <div class="container faq">
+      <div class="sec__head" data-reveal><h2 class="h2">Sık Sorulan Sorular</h2><p class="sec__lead">Cevabını bulamadığınız soruyu bize yazın.</p></div>
+      <div data-reveal>
+        <details><summary>Hangi paketi seçmeliyim?</summary><p>Tasarım ve kod dosyası yeterliyse Tasarım Paketi, yayına hazır bir site istiyorsanız Başlangıç Paketi uygundur. Profesyonel ve Premium paketlerde SEO, tanıtım videosu, revizyon ve bakım da bulunur. Emin değilseniz <a href="https://wa.me/905550459337?text=Merhaba%20Montra%20Studio%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp’tan yazın</a>, birlikte seçelim.</p></details>
+        <details><summary>Nasıl sipariş veririm?</summary><p>Paketinizi seçin, projenizi kısaca anlatın ve isterseniz ek hizmet ekleyin. Siparişiniz WhatsApp’ta hazır mesaj olarak açılır. Göndermeden önce düzenleyebilirsiniz.</p></details>
+        <details><summary>Ödemeyi bu siteden mi yapıyorum?</summary><p>Hayır. Bu sitede ödeme alınmaz, kart bilgisi istenmez. Ödeme yöntemi ve planı WhatsApp görüşmesinde netleşir.</p></details>
+        <details><summary>Sitem ne kadar sürede hazır olur?</summary><p>Süre, sayfa sayısına ve içeriklerinizin hazır olmasına göre değişir. Teslim tarihini işe başlamadan önce yazılı olarak paylaşırız. Acele projeler için Hızlı Teslim ek hizmeti var.</p></details>
+        <details><summary>Revizyon hakkım var mı?</summary><p>Profesyonel pakette 1, Premium pakette 3 revizyon hakkı bulunur. Her pakete sipariş sayfasından ek revizyon ekleyebilirsiniz.</p></details>
+        <details><summary>Domain ve hosting dahil mi?</summary><p>Başlangıç, Profesyonel ve Premium paketlere domain, hosting ve SSL dahildir. Tasarım Paketine ek hizmet olarak ekleyebilirsiniz.</p></details>
+        <details><summary>Sitem telefonda da düzgün görünecek mi?</summary><p>Evet. Tasarımları hem bilgisayar hem telefon ekranı için hazırlıyoruz.</p></details>
+        <details><summary>Teslimden sonra destek veriyor musunuz?</summary><p>Profesyonel pakette 3 ay, Premium pakette 6 ay ücretsiz bakım var. Her pakete 1 Yıl Bakım Paketi ekleyebilirsiniz.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== İletişim ====== -->
+  <section class="sec" id="iletisim">
+    <div class="container contact" data-reveal>
+      <div class="sec__head"><h2 class="h2">Projenizi Konuşalım</h2><p class="sec__lead">Aklınızdaki siteyi anlatın, size uygun paketi birlikte belirleyelim.</p></div>
+      <div class="contact__btns">
+        <a class="btn btn--primary" href="https://wa.me/905550459337?text=Merhaba%20Montra%20Studio%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg> WhatsApp’tan yaz</a>
+        <a class="btn btn--ghost" href="tel:+905550459337"><svg class="ico"><use href="#i-phone"/></svg> 0555 045 93 37</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <!-- ====== Footer ====== -->
-<footer class="footer" id="iletisim">
+<footer class="footer">
   <div class="footer__mcta m-only">
     <a href="tel:+905550459337" class="btn btn--primary">Teklif Al <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
     <a href="tel:+905550459337" class="phone"><svg class="ico"><use href="#i-phone"/></svg>0555 045 93 37</a>
@@ -284,6 +371,7 @@
       <li><a href="#portfolyo">Portfolyo</a></li>
       <li><a href="#paketler">Paketler</a></li>
       <li><a href="#hakkimizda">Hakkımızda</a></li>
+      <li><a href="#sss">SSS</a></li>
       <li><a href="#iletisim">İletişim</a></li>
     </ul>
     <ul class="footer__social">
@@ -296,7 +384,7 @@
   <div class="container footer__bottom">
     <p>© 2026 Montra Studio. Tüm hakları saklıdır.</p>
     <a href="tel:+905550459337" class="phone"><svg class="ico"><use href="#i-phone"/></svg>0555 045 93 37</a>
-    <p><a href="#">Gizlilik Politikası</a><span>|</span><a href="#">Kullanım Koşulları</a></p>
+    <p><a href="gizlilik.html">Gizlilik Politikası</a><a href="cerez-politikasi.html">Çerez Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a><button type="button" class="ck-open">Çerez Ayarları</button></p>
   </div>
 </footer>
 
@@ -310,6 +398,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=6"></script>
+<script src="js/consent.js?v=6"></script>
 </body>
 </html>
