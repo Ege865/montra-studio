@@ -91,20 +91,34 @@
      Animasyonlar (responsive + reduced motion)
      ========================================================= */
   let reduced = false;
+
+  /* ---------- Nasıl çalışıyoruz: sahne ---------- */
+  const proc = $('.proc');
+  const stage = $('.proc__stage');
+  const steps = $$('.proc__step');
+  steps.forEach((s) => stage.appendChild($('.pv', s).cloneNode(true)));
+  const views = $$('.pv', stage);
+  const list = $('.proc__steps');
+  list.insertAdjacentHTML('beforeend', '<li class="proc__line" role="presentation" aria-hidden="true"></li>');
+  proc.classList.add('is-ready');
   const mm = gsap.matchMedia();
 
   mm.add({
     motion: '(prefers-reduced-motion: no-preference)',
     reduce: '(prefers-reduced-motion: reduce)',
     desktop: '(min-width: 681px)',
+    wide: '(min-width: 961px)',
   }, (ctx) => {
     const { motion, desktop } = ctx.conditions;
     reduced = !motion;
 
     if (!motion) {
+      proc.classList.remove('is-ready');
       gsap.set(['.header', '[data-hero]', '[data-reveal]', '.hero__visual'], { autoAlpha: 1 });
       return;
     }
+
+    proc.classList.add('is-ready');
 
     /* --- Giriş (hero) timeline --- */
     const intro = gsap.timeline({ defaults: { ease: 'power4.out' } });
@@ -182,6 +196,26 @@
       xPercent: desktop ? -3 : 0, yPercent: desktop ? 0 : -4, ease: 'none',
       scrollTrigger: { trigger: '.portfolio', start: 'top bottom', end: 'bottom top', scrub: true },
     });
+
+    /* --- Nasıl çalışıyoruz --- */
+    if (ctx.conditions.wide) {
+      const tl = gsap.timeline({ scrollTrigger: { trigger: list, start: 'top 60%', end: 'bottom 60%', scrub: 0.4,
+        onUpdate: (self) => list.style.setProperty('--p', self.progress.toFixed(3)) } });
+      gsap.set(views.slice(1), { clipPath: 'inset(100% 0 0 0)' });
+      views.slice(1).forEach((v, i) => {
+        tl.to({}, { duration: 0.7 })
+          .fromTo(v, { clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0% 0 0 0)', duration: 0.6, ease: 'none' })
+          .from($$('.pv__cards i, .pv__pic, .pv__phone', v), { y: 24, opacity: 0, stagger: 0.05, duration: 0.25, ease: 'power2.out' }, '-=0.25');
+      });
+      tl.to({}, { duration: 0.7 });
+      gsap.from($$('.pv__msg', views[0]), { y: 24, opacity: 0, scale: 0.96, stagger: 0.35, duration: 0.6, ease: 'power3.out',
+        scrollTrigger: { trigger: stage, start: 'top 75%', once: true } });
+      steps.forEach((s) => ScrollTrigger.create({ trigger: s, start: 'top 60%', end: 'bottom 60%', toggleClass: 'is-on' }));
+    } else {
+      steps.forEach((s) => gsap.from($$('.pv__msg, .pv__hero i, .pv__pic, .pv__cards i, .pv__phone', s), {
+        y: 18, opacity: 0, stagger: 0.07, duration: 0.6, ease: 'power3.out',
+        scrollTrigger: { trigger: s, start: 'top 80%', once: true } }));
+    }
 
     /* --- Paket kartları --- */
     gsap.fromTo('.pcard', { autoAlpha: 0, y: 50 }, {

@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Inter:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=6">
-  <link rel="stylesheet" href="css/pages.css?v=6">
+  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/pages.css?v=7">
   <script>
     document.documentElement.classList.add('js');
     // GSAP yüklenemezse içerik gizli kalmasın
@@ -295,13 +295,16 @@
   <!-- ====== Süreç ====== -->
   <section class="sec" id="surec">
     <div class="container">
-      <div class="sec__head" data-reveal><h2 class="h2">Nasıl Çalışıyoruz?</h2><p class="sec__lead">İlk mesajınızdan yayına kadar dört adım.</p></div>
-      <ol class="flow">
-        <li data-reveal><h3>Sizi dinliyoruz</h3><p>İşinizi, beğendiğiniz siteleri ve ihtiyaçlarınızı konuşuyoruz.</p></li>
-        <li data-reveal><h3>Tasarlıyoruz</h3><p>Markanıza özel tasarımı hazırlayıp onayınıza sunuyoruz.</p></li>
-        <li data-reveal><h3>Geliştiriyoruz</h3><p>Onaylanan tasarımı bilgisayar ve telefonda çalışan bir siteye dönüştürüyoruz.</p></li>
-        <li data-reveal><h3>Teslim ediyoruz</h3><p>Paketinize göre siteyi yayına alıyor veya kod dosyalarını teslim ediyoruz.</p></li>
-      </ol>
+      <div class="sec__head" data-reveal><h2 class="h2">Mesajdan yayına,<br>siteniz böyle doğuyor</h2><p class="sec__lead">Her adımda ne yaptığımızı ve sizden ne beklediğimizi baştan bilirsiniz.</p></div>
+      <div class="proc">
+        <div class="proc__stage" aria-hidden="true"></div>
+        <ol class="proc__steps">
+          <li class="proc__step"><div class="pv pv--chat" aria-hidden="true"><div class="pv__msg pv__msg--me">Merhaba, kafem için bir site istiyorum.</div><div class="pv__msg">Harika! Sitede menü ve konum olsun mu?</div><div class="pv__msg pv__msg--me">Evet, bir de beğendiğim örnekleri atıyorum.</div></div><div><h3>Önce işinizi anlıyoruz</h3><p>Ne yaptığınızı, kime sattığınızı ve sitenin ne işe yarayacağını WhatsApp’tan konuşuyoruz. Size uygun paketi ve ek hizmetleri birlikte netleştiriyoruz.</p><p class="proc__you"><b>Sizden beklediğimiz</b>Kısa bir proje anlatımı ve varsa beğendiğiniz örnek siteler.</p></div></li>
+          <li class="proc__step"><div class="pv pv--wire" aria-hidden="true"><div class="pv__nav"><i></i><i></i><i></i><i></i></div><div class="pv__hero"><div><i></i><i></i><i></i><i></i></div><div class="pv__pic"></div></div><div class="pv__cards"><i></i><i></i><i></i></div></div><div><h3>Sayfaların iskeletini kuruyoruz</h3><p>Hangi sayfa nerede duracak, ziyaretçi önce neyi görecek, hangi düğmeye basacak? Renge geçmeden önce bunlara karar veriyoruz.</p><p class="proc__you"><b>Sizden beklediğimiz</b>Logo, metin ve fotoğraflarınız. Eksik olanları birlikte tamamlarız.</p></div></li>
+          <li class="proc__step"><div class="pv pv--art" aria-hidden="true"><div class="pv__nav"><i></i><i></i><i></i><i></i></div><div class="pv__hero"><div><i></i><i></i><i></i><i></i></div><div class="pv__pic"></div></div><div class="pv__cards"><i></i><i></i><i></i></div></div><div><h3>Markanıza göre tasarlıyoruz</h3><p>İskelet; renkleriniz, yazı tipiniz ve görsellerinizle gerçek bir tasarıma dönüşüyor. Bilgisayar ve telefon ekranını ayrı ayrı düşünüyoruz.</p><p class="proc__you"><b>Sizden beklediğimiz</b>Tasarıma onayınız. Değişiklikler paketinizdeki revizyon hakkıyla yapılır.</p></div></li>
+          <li class="proc__step"><div class="pv pv--live" aria-hidden="true"><div class="pv__bar"><span>My Bike Bursa</span></div><img src="assets/mybike-site.jpg" alt="" loading="lazy"><img class="pv__phone" src="assets/mybike-mobil.jpg" alt="" loading="lazy"></div><div><h3>Kodluyor, deniyor, teslim ediyoruz</h3><p>Onaylanan tasarımı çalışan bir siteye dönüştürüyor, farklı ekranlarda deniyoruz. Paketinize göre siteyi yayına alıyor veya kod dosyalarını teslim ediyoruz.</p><p class="proc__you"><b>Sizden beklediğimiz</b>Son kontrol. Profesyonel ve Premium pakette bakım süresi de başlar.</p></div></li>
+        </ol>
+      </div>
     </div>
   </section>
 
@@ -384,7 +387,7 @@
   <div class="container footer__bottom">
     <p>© 2026 Montra Studio. Tüm hakları saklıdır.</p>
     <a href="tel:+905550459337" class="phone"><svg class="ico"><use href="#i-phone"/></svg>0555 045 93 37</a>
-    <p><a href="gizlilik.html">Gizlilik Politikası</a><a href="cerez-politikasi.html">Çerez Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a><button type="button" class="ck-open">Çerez Ayarları</button></p>
+    <p><a href="gizlilik.html">Gizlilik Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a></p>
   </div>
 </footer>
 
@@ -398,7 +401,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="js/main.js?v=6"></script>
-<script src="js/consent.js?v=6"></script>
+<script src="js/main.js?v=7"></script>
 </body>
 </html>
