@@ -127,3 +127,39 @@
   .pricing__cards .pcard:nth-child(3)::after { background-image: url("../assets/heykel-01.jpg"); background-position: 56% top; }
   .pricing__cards .pcard:nth-child(4)::after { background-image: url("../assets/mimari-kemer.jpg"); background-position: 45% top; }
 }
+
+/* Site testi */
+@media (min-width: 1181px) {
+  .services__grid { grid-template-columns: repeat(6, 1fr); gap: 16px; }
+  .services__grid .scard { padding-inline: 16px; }
+}
+.audit { display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: center; }
+.audit .h2 { margin-bottom: 14px; }
+.audit__price { display: flex; align-items: baseline; gap: 12px; margin: 24px 0 22px; }
+.audit__price strong { font-family: var(--font-head); font-stretch: 110%; font-weight: 600; font-size: 42px; line-height: 1; }
+.audit__price span { font-size: 14px; color: #b5b5bb; }
+.audit__form label { display: block; font-size: 13px; margin-bottom: 8px; }
+.audit__form > div { display: flex; gap: 10px; max-width: 480px; }
+.audit__input { flex: 1; min-width: 0; height: 48px; padding: 0 18px; border-radius: 99px; border: 1px solid var(--line-2); background: #0c0c0e; color: var(--text); font: inherit; font-size: 16px; }
+.audit__input::placeholder { color: #85858c; }
+.audit__input:focus { outline: none; border-color: var(--pink); box-shadow: 0 0 0 3px rgba(255,31,102,.18); }
+.audit__form .btn { height: 48px; }
+.audit__err { min-height: 22px; margin-top: 6px; font-size: 13px; color: #ff7f97; }
+.audit__note { max-width: 480px; font-size: 13px; line-height: 1.65; color: #a5a5ab; }
+.report { position: relative; overflow: hidden; border-radius: 16px; border: 1px solid var(--line-2); background: linear-gradient(165deg, #151518, #0b0b0c); padding: 26px 30px 14px; }
+.report__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--line-2); }
+.report__head b { font-family: var(--font-head); font-stretch: 110%; font-weight: 600; font-size: 18px; }
+.report__head span { font-size: 12.5px; color: var(--muted); }
+.report li { display: grid; grid-template-columns: 20px 120px 1fr; gap: 12px; align-items: center; padding: 15px 0; font-size: 14px; border-bottom: 1px solid var(--line); }
+.report li:last-child { border: 0; }
+.report li svg { width: 18px; height: 18px; color: var(--pink); }
+.report li b { font-weight: 600; }
+.report li span { color: #b5b5bb; font-size: 13.5px; }
+.report__scan { position: absolute; left: 0; right: 0; top: 0; height: 90px; opacity: 0; pointer-events: none; background: linear-gradient(transparent, rgba(255,31,102,.16)); border-bottom: 1px solid var(--pink); }
+@media (max-width: 960px) { .audit { grid-template-columns: 1fr; gap: 40px; } }
+@media (max-width: 680px) {
+  .report { padding: 22px 20px 8px; }
+  .report li { grid-template-columns: 20px 1fr; gap: 2px 12px; }
+  .report li span { grid-column: 2; }
+  .audit__form .btn { padding: 0 18px; }
+}

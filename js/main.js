@@ -92,6 +92,21 @@
      ========================================================= */
   let reduced = false;
 
+  /* ---------- Site testi: WhatsApp mesajı ---------- */
+  $('#auditForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const input = $('#auditUrl');
+    const site = input.value.trim();
+    const ok = /^(https?:\/\/)?[^\s\/.]+(\.[^\s\/.]+)+(\/\S*)?$/i.test(site);
+    $('#auditErr').textContent = ok ? '' : 'Site adresini ornek.com biçiminde yazın.';
+    input.setAttribute('aria-invalid', String(!ok));
+    if (!ok) { input.focus(); return; }
+    const text = `Merhaba Montra Studio, sitem için test ve detaylı rapor istiyorum.\n\n*Site:* ${site}\n*Hizmet:* Site Testi - ₺2.000`;
+    const url = `https://wa.me/905550459337?text=${encodeURIComponent(text)}`;
+    const win = window.open(url, '_blank');
+    if (win) win.opener = null; else location.href = url;
+  });
+
   /* ---------- Nasıl çalışıyoruz: sahne ---------- */
   const proc = $('.proc');
   const stage = $('.proc__stage');
@@ -196,6 +211,12 @@
       xPercent: desktop ? -3 : 0, yPercent: desktop ? 0 : -4, ease: 'none',
       scrollTrigger: { trigger: '.portfolio', start: 'top bottom', end: 'bottom top', scrub: true },
     });
+
+    /* --- Site testi: tarama --- */
+    gsap.timeline({ scrollTrigger: { trigger: '.report', start: 'top 70%', once: true } })
+      .fromTo('.report__scan', { y: -90, opacity: 1 }, { y: () => $('.report').offsetHeight, duration: 2, ease: 'none' }, 0.3)
+      .set('.report__scan', { opacity: 0 })
+      .fromTo('.report li svg', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, stagger: 0.24, duration: 0.45, ease: 'back.out(2)' }, 0.75);
 
     /* --- Nasıl çalışıyoruz --- */
     if (ctx.conditions.wide) {
